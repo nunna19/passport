@@ -1,0 +1,19 @@
+
+
+<form action="/Items/{{_id}}/edit" method="post" enctype="multipart/form-data">
+<select name="item">
+			<option value="appetizer" >appetizer</option>
+			<option value="mainDish"  >main dish</option>
+			<option value="desserts"  >desserts</option>
+      <option value="beverages" >beverages</option>
+</select>
+<label>name</label>
+<input type="text" name="name" value="{{this.name}}">
+<label>description</label>
+<input type="text" name="description" value="{{this.description}}">
+<label>price</label>
+<input type="text" name="price" value="{{this.price}}">
+<label>image</label>
+<input type ="file" name ="Photo" >
+<input type="submit" value="SAVE">
+</form>
