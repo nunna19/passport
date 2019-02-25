@@ -2,11 +2,11 @@
 
 Add new item
 <form action="/addItems" method="post" enctype="multipart/form-data">
-<select name="item">
-			<option value="appetizer"  name ="appetizer" >appetizer</option>
-			<option value="mainDish"   name ="mainDish"  >main dish</option>
-			<option value="desserts"   name ="desserts"  >desserts</option>
-      <option value="beverages"  name ="beverages" >beverages</option>
+<select name="itemType">
+			<option value="Appetizer"  name ="Appetizer" >appetizer</option>
+			<option value="Main dish"   name ="Main dish"  >main dish</option>
+			<option value="Desserts"   name ="Desserts"  >desserts</option>
+      <option value="Beverages"  name ="Beverages" >beverages</option>
 </select>
 <label>name</label>
 <input type="text" name="name">
@@ -19,6 +19,15 @@ Add new item
 <input type="submit" value="SAVE">
 </form>
 
-<button><a href="##">Edit Mene</a></button>
+
+<p><a href="/logout">Log out</a></p>
+
+<a href="/allMenu">All Menu</a>
+<a href="/appetizer">Appetizer</a>
+<a href="/mainDish">Main dish</a>
+<a href="/desserts">Desserts</a>
+<a href="/beverages">Beverages</a>
+
+<button><a href="/">homepage</a></button>
 
 

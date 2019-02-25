@@ -4,6 +4,8 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const ensureLogin = require("connect-ensure-login");
 const User = require("../models/user");
+const Item= require("../models/item");
+
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 const uploadCloud = require('../config/cloudinary')
@@ -77,17 +79,12 @@ authRoutes.post("/login", passport.authenticate("local", {
 }));
 
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated())
+  if (req.isAuthenticated()  )
       return next();
-
   res.redirect('/');
+
+
 }
-
-authRoutes.get("/private-page", isLoggedIn, (req, res) => {
-  res.render("addItem", { user: req.user });
-});
-
-
 
 authRoutes.get("/logout", (req, res) => {
   req.logout();
@@ -99,27 +96,34 @@ authRoutes.get("/logout", (req, res) => {
 
 
 
+authRoutes.get("/private-page", isLoggedIn, (req, res) => {
+  res.render("addItem", { user: req.user });
+});
+
+
+
+
 ///..............................................Add Item..........................................................
 
-// authRoutes.get('/',(req,res,next) =>{
-//   console.log('get in fo from database work.....................')
-//   User.find().then(inofFromDB => { 
-//     console.log(inofFromDB, 'inofFromDB')
-//   res.render('/index',{item:inofFromDB })
-//   })
-//   });
+authRoutes.get('/allMenu',isLoggedIn,(req,res,next) =>{
+  Item.find().then(inofFromDB => { 
+    console.log('upland...........................', inofFromDB)
+  res.render('allMenu',{item:inofFromDB })
+  })
+  });
 
 
-authRoutes.post('/addItems', uploadCloud.single('Photo'),(req,res,next)=>{
+authRoutes.post('/addItems', isLoggedIn, uploadCloud.single('Photo'),(req,res,next)=>{
   
     console.log('post',req.body)
-    const { item,name, description,price } = req.body;
+    const { itemType,name, description,price } = req.body;
     const image = req.file.url;
     const imgName = req.file.originalname;
-    const newAddImg = new User ({item,name, description,price,image, imgName, })
+    const restaurant = req.user._id
+    const newAddImg = new Item ({itemType,name, description,price,image, imgName, restaurant })
     newAddImg.save()
     .then(images => {
-      res.redirect('/')
+      res.redirect('/allMenu')
 
     })
     .catch(error => {
@@ -127,27 +131,103 @@ authRoutes.post('/addItems', uploadCloud.single('Photo'),(req,res,next)=>{
     })
 })
 
+
+
+
+
+
+
+
+
+
+
+
 ///..............................................Edit Item..........................................................
 
-// router.get('/editItem', (req, res, next) => {
-//   res.render("editItem");
-// });
+authRoutes.get('/item/:id/edit',isLoggedIn, (req, res, next) => {
+  console.log('123431242142',req.params)
+Item.findById(req.params.id)
+.then(menuEdit=>{
+  console.log('Edit.........................................',menuEdit)
+  res.render('editItem',{menuEdit})
+})
+.catch(error => {
+  console.log(error);
+})
+});
 
-// authRoutes.get('/editItems'),(req,res,next)=>{
-// user.findById(req.params.id).then(thatItem=>{
-//   res.render('index',{item: thatItem})
-// })
-// .catcg(err=> console.log(err))
-// }
 
-authRoutes.delete('/item/:id/delete', (req, res, next) => {
-  console.log('/////////////////////////////////')
-  User.findByIdAndRemove(req.params.id)
+
+
+
+
+
+///..............................................Delete Item..........................................................
+
+authRoutes.post('/item/:id/delete', isLoggedIn,(req, res, next) => {
+ 
+  Item.findByIdAndRemove(req.params.id)
     .then(() => {
-      res.redirect('/index');
+      res.redirect('/allMenu');
     })
     .catch(err => console.log(err));
 });
+
+  
+
+///..............................................page Menu..........................................................
+
+authRoutes.get('/appetizer',isLoggedIn,(req,res,next) =>{
+  Item.find({'itemType' :'Appetizer' }).then(inofFromDB => { 
+  
+    console.log('upland...........................', inofFromDB)
+  res.render('appetizer',{item:inofFromDB })
+    
+  })
+  });
+
+
+
+
+  authRoutes.get('/mainDish',isLoggedIn,(req,res,next) =>{
+    Item.find({'itemType' :'Main dish' }).then(inofFromDB => { 
+    
+      console.log('upland...........................', inofFromDB)
+    res.render('mainDish',{item:inofFromDB })
+      
+    })
+    });
+
+
+
+authRoutes.get('/desserts',isLoggedIn,(req,res,next) =>{
+      Item.find({'itemType' :'Desserts' }).then(inofFromDB => { 
+      
+        console.log('upland...........................', inofFromDB)
+      res.render('desserts',{item:inofFromDB })
+        
+      })
+      });
+
+
+
+ authRoutes.get('/beverages',isLoggedIn,(req,res,next) =>{
+       Item.find({'itemType' :'Beverages' }).then(inofFromDB => { 
+        
+          console.log('upland...........................', inofFromDB)
+        res.render('beverages',{item:inofFromDB })
+          
+        })
+        });
+
+
+
+
+
+
+
+
+
 
 
 

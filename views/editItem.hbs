@@ -1,19 +1,19 @@
 
 
-<form action="/Items/{{_id}}/edit" method="post" enctype="multipart/form-data">
-<select name="item">
+<form action="/item/{{menuEdit.id}}/edit" method="post" enctype="multipart/form-data">
+<select name="itemType" value="{{menuEdit.itemType}}">
 			<option value="appetizer" >appetizer</option>
 			<option value="mainDish"  >main dish</option>
 			<option value="desserts"  >desserts</option>
       <option value="beverages" >beverages</option>
 </select>
 <label>name</label>
-<input type="text" name="name" value="{{this.name}}">
+<input type="text" name="name" value="{{menuEdit.name}}">
 <label>description</label>
-<input type="text" name="description" value="{{this.description}}">
+<input type="text" name="description" value="{{menuEdit.description}}">
 <label>price</label>
-<input type="text" name="price" value="{{this.price}}">
+<input type="text" name="price" value="{{menuEdit.price}}">
 <label>image</label>
-<input type ="file" name ="Photo" >
+<input type ="file" name ="Photo"  value="{{menuEdit.image}}"  >
 <input type="submit" value="SAVE">
 </form>
