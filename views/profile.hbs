@@ -1,0 +1,60 @@
+Profile page
+{{#if user}}
+  <div>
+    <h1>Welcome {{user.username}}!!! this is where you edit your restaurant<h1>
+    <button><a href="/add-Main-page">Update Restaurant page</a></button>
+    <form action="/mainSite/{{_id}}/edit" method="GET">
+     <button type="submit">Edit Restaurant page</button>
+   </form>
+</form>
+  </div>
+{{/if}}
+
+
+
+Add new item
+<form action="/addItems" method="post" enctype="multipart/form-data">
+<select name="itemType">
+			<option value="Appetizer"  name ="Appetizer" >appetizer</option>
+			<option value="Main dish"  name ="Main dish"  >main dish</option>
+			<option value="Desserts"   name ="Desserts"  >desserts</option>
+      <option value="Beverages"  name ="Beverages" >beverages</option>
+</select>
+<label>name</label>
+<input type="text" name="name">
+<label>description</label>
+<input type="text" name="description">
+<label>price</label>
+<input type="text" name="price">
+<label>image</label>
+<input type ="file" name ="Photo">
+<input type="submit" value="SAVE">
+</form>
+
+
+
+
+
+
+
+
+
+
+{{#each item}}
+{{itemType}}
+<h5>{{name}}</h5>
+<p>{{description}}</p>
+<p>{{price}}</p>
+<img src="{{image}}" alt="">
+
+ <form action="/item/{{_id}}/edit" method="GET">
+     <button type="submit">Edit</button>
+</form>
+
+ <form action="/item/{{_id}}/delete" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  </form>
+ {{else}}
+    <p>There are no menu yet! </p>
+{{/each}}

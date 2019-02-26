@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // $(window).scroll(function (event) {
-  //   var scroll = $(window).scrollTop();
-  //   console.log(scroll)
-  //   $('.restaurant').css({backgroundSize:scroll+'px'})
-  //   // Do something
-  // });
+  $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    console.log(scroll)
+    $('.restaurant').css({backgroundSize:scroll+'px'})
+    // Do something
+  });
 
 
 

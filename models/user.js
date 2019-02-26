@@ -8,8 +8,8 @@ const userSchema = new Schema({
   firstName: String,
   lastName:String,
   email:String,
-  
- 
+  image:String,
+  description:String,
 
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }

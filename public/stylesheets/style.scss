@@ -2,15 +2,16 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 height: 3000px;
 }
-// .restaurant{
-//   background-image:url('https://cdn.vox-cdn.com/thumbor/LE49FmSyknuyqMIihXxAlDF5rec=/0x0:2000x1335/1570x883/filters:focal(840x508:1160x828):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/57882079/2017_12_05_TheHearthAndHound_005.0.jpg');
-//   background-attachment: fixed;
-//   background-repeat: no-repeat;
-//   height: 700px;
-//   width: 100%;
-//   position: fixed;
-//   background-position:center; 
-// }
+.restaurant{
+  //background-image:url('https://cdn.vox-cdn.com/thumbor/LE49FmSyknuyqMIihXxAlDF5rec=/0x0:2000x1335/1570x883/filters:focal(840x508:1160x828):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/57882079/2017_12_05_TheHearthAndHound_005.0.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 100%;
+  position: fixed;
+  background-position:center; 
+  pointer-events:none;
+}
 a {
   color: #00B7FF;
 }
