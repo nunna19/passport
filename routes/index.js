@@ -32,7 +32,7 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
 router.get('/restaurant/:username',isLoggedIn,(req,res,next) =>{
   Item.find().then(inofFromDB => { 
     console.log('upland...........................', inofFromDB)
-  res.render('allMenu',{
+  res.render('view-customer',{
       item:inofFromDB, 
       mainPicture:req.user.image
       
@@ -93,7 +93,11 @@ router.post('/item/:id/edit',isLoggedIn, uploadCloud.single('Photo'), (req, res,
     Item.findById(req.params.id)
       .then(item=>{
         console.log('edit item',item)
+        item.itemType =req.body.itemType
+        item.name = req.body.name
+        item.description = req.body.description
         item.price = req.body.price
+        item.image= req.file.url;
         item.save();
         res.redirect('../../profile')
       })

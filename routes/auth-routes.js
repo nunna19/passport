@@ -145,11 +145,11 @@ authRoutes.post('/mainSite', isLoggedIn, uploadCloud.single('Photo'),(req,res,ne
 // ///..............................................Edit mian page..........................................................
 
 authRoutes.get('/mainSite/:id/edit',isLoggedIn, (req, res, next) => {
-
-User.findById(req.user.id)
+User.findById(req.params.id)
+console.log('edit work...........................',req.params.id)
 .then(editMainPage=>{
   console.log('Edit.........................................',editMainPage)
-  res.render('Edit-Main-Page',{editMainPage})
+  res.render('add-Main-page',{editMainPage})
 })
 .catch(error => {
   console.log(error);
@@ -157,13 +157,38 @@ User.findById(req.user.id)
 });
 
 
+authRoutes.post('/mainSite/:id/edit',isLoggedIn, uploadCloud.single('Photo'), (req, res, next) => {
+    console.log('req.body',req.body)
+
+    User.findById(req.user.id)
+      .then(restaurant=>{
+        console.log('edit item',restaurant)
+        restaurant.description = req.body.description
+        restaurant.image = req.body.image
+        restaurant.username = req.body.username
+        restaurant.save();
+        res.redirect('../../add-Main-page')
+      })
+      .catch(error => {
+        console.log(error);
+      })
+})
 
 
 
 
 
-
-
+// router.get('/item/:id/edit',isLoggedIn, (req, res, next) => {
+//   console.log('123431242142',req.params)
+// Item.findById(req.params.id)
+// .then(menuEdit=>{
+//   console.log('Edit.........................................',menuEdit)
+//   res.render('editItem',{menuEdit})
+// })
+// .catch(error => {
+//   console.log(error);
+// })
+// });
   
 
 

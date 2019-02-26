@@ -11,3 +11,12 @@
 
 
 homepage Info
+{{#if Restaurant }}
+{{Restaurant.username}}
+{{Restaurant.description}}
+<img src="{{Restaurant.image}}" />
+ <form action="/mainSite/{{_id}}/edit" method="GET">
+     <button type="submit">Edit Restaurant page</button>
+</form>
+
+{{/if}}
