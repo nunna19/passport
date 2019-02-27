@@ -1,15 +1,32 @@
 
+<link rel="stylesheet" href="../../../stylesheets/restaurant.css" />
 
-<div style="background-image:url('{{ mainPicture }}')" class="restaurant"></div>
-This is where your restaurnant looks nice:::
 
-{{#each item}}
-{{itemType}}
-<h5>{{name}}</h5>
-<p>{{description}}</p>
-<p>{{price}}</p>
-<img src="{{image}}" alt="">
-{{/each}} 
+<div class="navbar">
+  <a>{{user.username}}</a>
+  <a href="#home">About us</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">appetizer</a>
+      <a href="#">main dish</a>
+      <a href="#">desserts</a>
+      <a href="#">beverages</a>
+    </div>
+  </div> 
+  <a href="#">Contact</a>
+</div>
+
+
+<div style="background-image:url('{{ mainPicture }}')" class="restaurant">
+
+</div>
+
+
+
 
 
 

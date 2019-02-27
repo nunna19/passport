@@ -1,4 +1,6 @@
 Profile page
+<a href="/">homepage</a>
+<a href="/profile">profile</a>
 {{#if user}}
   <div>
     <h1>Welcome {{user.username}}!!! this is where you edit your restaurant<h1>
@@ -37,7 +39,7 @@ Add new item
 
 
 
-
+<link rel="stylesheet" href="../../../stylesheets/profile.css" />
 {{#each item}}
 {{itemType}}
 <h5>{{name}}</h5>

@@ -17,7 +17,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
   //res.render('profile', {user:req.user})
-  Item.find().then(inofFromDB => { 
+  Item.find({restaurant:req.user._id}).then(inofFromDB => { 
     console.log('upland......profile.....................', inofFromDB)
     res.render('profile', {user:req.user, item:inofFromDB })
   })
@@ -29,15 +29,18 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
 
 ///..............................................Add Item..........................................................
 
-router.get('/restaurant/:username',isLoggedIn,(req,res,next) =>{
-  Item.find().then(inofFromDB => { 
-    console.log('upland...........................', inofFromDB)
-  res.render('view-customer',{
-      item:inofFromDB, 
-      mainPicture:req.user.image
-      
+
+
+router.get('/restaurant/:username',isLoggedIn,(req,res,next) =>{ //THIS IS THE ONE THAT NEEDS MOST STYLING
+  User.findOne({username:req.params.username}).then(user=>{
+    Item.find({restaurant:user._id}).then(inofFromDB => { 
+      console.log('upland...........................', inofFromDB)
+      res.render('view-customer',{ //VIEW CUSTOMER.HBS
+          item:inofFromDB, 
+          mainPicture:user.image      
+      })
+    });
   })
-  });
 })
 
 

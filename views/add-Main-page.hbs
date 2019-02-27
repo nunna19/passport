@@ -1,6 +1,12 @@
+<a href="/">homepage</a>
+<a href="/profile">profile</a>
+
+
 <form action="/mainSite" method="post" enctype="multipart/form-data">
-          <label>name restaurant:</label>
-          <input type="text" name="nameRestaurant">
+
+<h1>update and change restaurant page</h1>
+
+
           <label>description</label>
           <input type="text" name="description">
           <label>image</label>
@@ -15,8 +21,6 @@ homepage Info
 {{Restaurant.username}}
 {{Restaurant.description}}
 <img src="{{Restaurant.image}}" />
- <form action="/mainSite/{{_id}}/edit" method="GET">
-     <button type="submit">Edit Restaurant page</button>
-</form>
+
 
 {{/if}}

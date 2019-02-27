@@ -1,4 +1,9 @@
+
+<link rel="stylesheet" href="../../../stylesheets/home.css" />
+<a href="/">homepage</a>
+<a href="/profile">profile</a>
 {{#if user}}
+  See your Restarant at <a href="restuarant/{{user.username}}">{{user.username}}</a>
   <a href="/logout">Log out</a>
 {{else}}
 <a href="/signup"> Sign up </a>
