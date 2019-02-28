@@ -1,27 +1,40 @@
-<a href="/">homepage</a>
 
+<link rel="stylesheet" href="../../../stylesheets/signup.css" />
+<br>
+<div > <a class="home" href="/">home</a></div>
+ 
 
-<!-- views/auth/signup.hbs -->
-<h2>Signup</h2>
+<div class="boxSignup">
 
-<form action="/signup" method="POST" id="form-container">
-  <label for="username">Resturant name</label>
-  <input id="username" type="text" name="username" placeholder="username">
-  <br><br>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <input id ="name" type="text" name="firstName" placeholder="first name">
-  <input id ="lastName" type="text" name="lastName" placeholder="last name">
-  <input id ="email" type="email" name="email" placeholder="your email">
-  {{#if message}}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-  <br><br>
+      
+        <h2>Signup</h2>
 
-  <button>Create account</button>
+        <form action="/signup" method="POST" id="form-container">
+          <label for="username">Resturant name: </label>
+          <input id="username" type="text" name="username">
+          </br>
+          <label for="password">Password: </label>
+          <input id="password" type="text" name="password" >
+          </br>
+         <label for="password">FirstName: </label>
+          <input id ="name" type="text" name="firstName" >
+            </br>
+          <label for="password">LastName: </label>
+          <input id ="lastName" type="text" name="lastName">
+            </br>
+           <label for="password">Email: </label>
+          <input id ="email" type="email" name="email" >
+          {{#if message}}
+            <div class="error-message">{{ message }}</div>
+          {{/if}}
+          <br><br>
 
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/login">Login</a>
-  </p>
-</form>
+          <button>Create account</button>
+
+          <p class="account-message">
+            Do you already have an account?
+            <button ><a class="login" href="/login">Login</a></button>
+          </p>
+        </form>
+
+</div>

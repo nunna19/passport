@@ -1,60 +1,79 @@
-Profile page
-<a href="/">homepage</a>
-<a href="/profile">profile</a>
-{{#if user}}
-  <div>
-    <h1>Welcome {{user.username}}!!! this is where you edit your restaurant<h1>
-    <button><a href="/add-Main-page">Update Restaurant page</a></button>
-   
 
+<link rel="stylesheet" href="../../../stylesheets/profile.css" />
+{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> --}}
+
+
+<a class="home" href="/">home</a>
+
+{{#if user}}
+  <div class="welcome">
+    <h1>Welcome "{{user.username}}" </h1>
+    
+      <p>Add and Edit your website</p>
+      
   </div>
 {{/if}}
 
-
-
-Add new item
-<form action="/addItems" method="post" enctype="multipart/form-data">
-<select name="itemType">
-			<option value="Appetizer"  name ="Appetizer" >appetizer</option>
-			<option value="Main dish"  name ="Main dish"  >main dish</option>
-			<option value="Desserts"   name ="Desserts"  >desserts</option>
-      <option value="Beverages"  name ="Beverages" >beverages</option>
-</select>
-<label>name</label>
-<input type="text" name="name">
-<label>description</label>
-<input type="text" name="description">
-<label>price</label>
-<input type="text" name="price">
-<label>image</label>
-<input type ="file" name ="Photo">
-<input type="submit" value="SAVE">
-</form>
+ <button class="resUpdate"><a href="/add-Main-page">Update background image</a></button>
 
 
 
+<div class="addItemFrom">
+
+        <h1 >Add new item</h1>
+        <form action="/addItems" method="post" enctype="multipart/form-data">
+        <select name="itemType">
+              <option  class="option" value="Appetizer"  name ="Appetizer" >appetizer</option>
+              <option class="option"  value="Main dish"  name ="Main dish"  >main dish</option>
+              <option class="option" value="Desserts"   name ="Desserts"  >desserts</option>
+              <option class="option" value="Beverages"  name ="Beverages" >beverages</option>
+        </select>
+        <label>Item name:</label>
+        <input type="text" name="name">
+        <label>description:</label>
+        <input type="text" name="description">
+        <label>price:</label>
+        <input type="text" name="price">
+        <label>image:</label>
+        <input type ="file" name ="Photo">
+        <input type="submit" value="SAVE">
+        </form>
+
+</div>
 
 
 
 
 
 
-<link rel="stylesheet" href="../../../stylesheets/profile.css" />
+
+
+
+
 {{#each item}}
-{{itemType}}
-<h5>{{name}}</h5>
-<p>{{description}}</p>
-<p>{{price}}</p>
-<img src="{{image}}" alt="">
+ <div class="red-box container" >
+      <div class="row">
+           
+            
+        <div class="col">
+                          <img src="{{image}}" alt="">
+                          {{itemType}}
+                        <h5>{{name}}</h5>
+                        <p>{{price}}</p>
+                          <p>{{description}}</p>
+                  <form action="/item/{{_id}}/edit" method="GET">
+                  <button type="submit">Edit</button>
+                  </form>
 
- <form action="/item/{{_id}}/edit" method="GET">
-     <button type="submit">Edit</button>
-</form>
-
- <form action="/item/{{_id}}/delete" method="POST">
-    <button type="submit">Delete</button>
-  </form>
-  </form>
- {{else}}
+                  <form action="/item/{{_id}}/delete" method="POST">
+                  <button type="submit">Delete</button>
+                  </form>
+  
+        </div>   
+      </div>
+  </div>
+   {{else}}
     <p>There are no menu yet! </p>
-{{/each}}
+
+  {{/each}}
+

@@ -1,16 +1,21 @@
-<form action="/login" method="POST">
+
+<link rel="stylesheet" href="../../../stylesheets/login.css" />
+
+<div > <a class="home" href="/">home</a></div>
+
+<form action="/login" method="POST" class="loginFrom">
   <div>
     <label for="username">Resturant name:</label>
-    <input type="text" name="username">
+    <input type="text" name="username" class="fillLogin">
   </div>
   <div>
     <label for="password">Password:</label>
-    <input type="password" name="password">
+    <input type="password" name="password" class="fillLogin">
   </div>
   {{#if message}}
     <div class="error-message">{{ message }}</div>
   {{/if}}
   <div>
-    <input type="submit" value="Log In">
+    <input  class ="login"type="submit" value="Log In"> don't have account <a href="/signup"> Sign up </a>
   </div>
 </form>

@@ -7,16 +7,30 @@ body{
 
 }
 .signup , .profile{
-  left: 38%;
+  left: 35%;
+  padding: 10px;
  
 }
+.signup , .login{
+  top:35%;
+}
+.profile, .logout{
+  top:45%;
+}
 .login, .logout{
-  left: 50%;
+  right: 40%;
+  padding: 10px 17px 10px 17px;
+ 
 }
 .login, .signup, .profile, .logout{
+  text-decoration: none;
   position: absolute;
-  top:45%;
   font-size: 2vw;
+  border: 1px solid none;
+  border-radius: 5px;
+  color: white;
+ 
+
   
 }
 .welcome{

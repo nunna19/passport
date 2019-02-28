@@ -1,0 +1,55 @@
+body{
+  background: url('../images/Screen\ Shot\ 2019-02-28\ at\ 1.05.21\ PM.png')no-repeat center center fixed;
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+.boxSignup{
+  border: 5px solid none;
+  border-radius: 20px;
+  width: 300px;
+  background-color: rgb(189, 186, 186);
+ margin:15% 10% 0 50%;
+ padding-left: 50px;
+ padding-top: 5px;
+ height: 350px;
+}
+input, label{
+  margin-top: 2%;
+}
+input{
+  border: 1px solid rgb(135, 167, 187);
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+button{
+  color: white;
+  border: 1px solid rgb(135, 167, 187);
+  background-color: rgb(126, 182, 148);
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+.login{
+
+  text-decoration: none;
+ color: white;
+}
+.home{
+  position: absolute;
+  top:10px;
+  background-image: url('../images/arrow.png');
+ color: brown;
+ font-size: 20px;
+ text-decoration: none;
+ margin-left:30px;
+ border: 5px solid brown;
+ border-radius: 10px;
+ padding: 5px;
+ 
+}

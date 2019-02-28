@@ -1,0 +1,58 @@
+body{
+  background: url('../images/Screen\ Shot\ 2019-02-28\ at\ 1.56.47\ PM.png')no-repeat center center fixed;
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+.loginFrom{
+  border: 5px solid none;
+  border-radius: 20px;
+  width: 300px;
+  background-color: rgb(189, 186, 186);
+ padding-left: 50px;
+ padding-top: 10px;
+ height: 120px;
+ display: block;
+  margin: 0 auto;
+  margin-top:8%;
+}
+input, label{
+  margin-top: 2%;
+}
+.login {
+  border: 1px solid rgb(135, 167, 187);
+  border-radius: 5px;
+  background-color: rgb(126, 182, 148);
+  color: black;
+  padding: 5px;
+  color: white;
+}
+
+.fillLogin{
+  border: 1px solid rgb(135, 167, 187);
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+}
+a{
+  color: rgb(3, 46, 21);
+}
+
+.home{
+  position: absolute;
+  top:5px;
+  background-image: url('../images/arrow.png');
+ color: brown;
+ font-size: 20px;
+ text-decoration: none;
+ margin: 10px 0 0 30px;
+ border: 5px solid brown;
+ border-radius: 10px;
+ padding: 5px;
+ 
+}
+
