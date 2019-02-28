@@ -23,11 +23,12 @@ const session = require("express-session");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const dbPass = process.env.dbPass;
 // app.js
 // Mongoose configuration
 mongoose.Promise = Promise;
 mongoose
-  .connect(`mongodb+srv://nunnapat:${process.env.dbPass}@cluster0-ljdlj.mongodb.net/test?retryWrites=true`)
+  .connect(`mongodb+srv://nunnapat:${dbPass}@cluster0-ljdlj.mongodb.net/test?retryWrites=true`)
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
