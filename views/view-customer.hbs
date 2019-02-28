@@ -3,20 +3,20 @@
 
 
 <div class="navbar">
-  <a>{{user.username}}</a>
-  <a href="#home">About us</a>
-  <a href="#news">News</a>
+ 
+  <a href="{{user.username}}/home">About {{user.username}}</a>
   <div class="dropdown">
     <button class="dropbtn">Menu 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">appetizer</a>
-      <a href="#">main dish</a>
-      <a href="#">desserts</a>
-      <a href="#">beverages</a>
+      <a href="{{user.username}}/{{user._id}}/Appetizer">appetizer</a>
+      <a href="{{user.username}}/{{user._id}}/MainDish">main dish</a>
+      <a href="{{user.username}}/{{user._id}}/Desserts">desserts</a>
+      <a href="{{user.username}}/{{user._id}}/Beverages">beverages</a>
     </div>
-  </div> 
+  </div>
+  <a href="#news">Order online</a>
   <a href="#">Contact</a>
 </div>
 

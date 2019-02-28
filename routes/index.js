@@ -11,8 +11,18 @@ const uploadCloud = require('../config/cloudinary')
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  res.render('index', {user:req.user});
+  res.render('homepage', {user:req.user});
 });
+
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()  )
+      return next();
+  res.redirect('/login');
+
+
+}
+
+
 
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
@@ -31,13 +41,15 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
 
 
 
-router.get('/restaurant/:username',isLoggedIn,(req,res,next) =>{ //THIS IS THE ONE THAT NEEDS MOST STYLING
+router.get('/restaurant/:username',(req,res,next) =>{ //THIS IS THE ONE THAT NEEDS MOST STYLING
   User.findOne({username:req.params.username}).then(user=>{
     Item.find({restaurant:user._id}).then(inofFromDB => { 
       console.log('upland...........................', inofFromDB)
       res.render('view-customer',{ //VIEW CUSTOMER.HBS
           item:inofFromDB, 
-          mainPicture:user.image      
+          mainPicture:user.image, 
+          description: user.description,
+          user:user,   
       })
     });
   })
@@ -127,48 +139,27 @@ router.post('/item/:id/delete', isLoggedIn,(req, res, next) => {
 
 ///..............................................page Menu..........................................................
 
-router.get('/appetizer',isLoggedIn,(req,res,next) =>{
-  Item.find({'itemType' :'Appetizer' }).then(inofFromDB => { 
-  
-    console.log('upland...........................', inofFromDB)
-  res.render('appetizer',{item:inofFromDB })
-    
+
+
+ 
+router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
+
+  console.log('we are in here',req.params, res.user)
+  let itemType = req.params.itemType;
+  Item.find({itemType:itemType,restaurant:req.params.id}).then(items=>{
+    console.log(items)
+    res.render('items.hbs', {items, itemType})
+
   })
+
   });
 
 
-
-
-  router.get('/mainDish',isLoggedIn,(req,res,next) =>{
-    Item.find({'itemType' :'Main dish' }).then(inofFromDB => { 
-    
-      console.log('upland...........................', inofFromDB)
-    res.render('mainDish',{item:inofFromDB })
-      
-    })
-    });
+ 
 
 
 
-router.get('/desserts',isLoggedIn,(req,res,next) =>{
-      Item.find({'itemType' :'Desserts' }).then(inofFromDB => { 
-      
-        console.log('upland...........................', inofFromDB)
-      res.render('desserts',{item:inofFromDB })
-        
-      })
-      });
-
-
-
- router.get('/beverages',isLoggedIn,(req,res,next) =>{
-       Item.find({'itemType' :'Beverages' }).then(inofFromDB => { 
-        
-          console.log('upland...........................', inofFromDB)
-        res.render('beverages',{item:inofFromDB })
-          
-        })
-        });
+  
 
 
 
@@ -178,11 +169,4 @@ router.get('/desserts',isLoggedIn,(req,res,next) =>{
 
 
 
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()  )
-      return next();
-  res.redirect('/login');
-
-
-}
 module.exports = router;

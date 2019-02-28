@@ -1,0 +1,13 @@
+
+<link rel="stylesheet" href="../../../stylesheets/homepage.css" />
+
+{{#if user}}
+<button class="profile"><a href="/profile">profile</a></button>
+   <a class="welcome" href="restuarant/{{user.username}}">Welcome {{user.username}}</>
+  <button class="logout"><a href="/logout">Log out</a></button>
+{{else}}
+
+<button class="signup"><a href="/signup"> Sign up </a></button>
+<button class="login"><a href="/login">Log In</a></button>
+
+{{/if}}

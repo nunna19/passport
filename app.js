@@ -23,7 +23,7 @@ const LocalStrategy = require("passport-local").Strategy;
 // Mongoose configuration
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/Restaurant')
+  .connect('process.env.data')
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
