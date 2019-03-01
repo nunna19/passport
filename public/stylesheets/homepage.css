@@ -15,7 +15,7 @@ body{
   top:35%;
 }
 .profile, .logout{
-  top:45%;
+  top:35%;
 }
 .login, .logout{
   right: 40%;
@@ -28,17 +28,39 @@ body{
   font-size: 2vw;
   border: 1px solid none;
   border-radius: 5px;
-  color: white;
- 
+  color: rgb(0, 171, 250)
 
-  
 }
-.welcome{
+
+.welcome,.welcome1{
   position: absolute;
   left: 38%;
-  top:25%;
+  top:20vh;
   font-size: 3vw;
+  color: rgb(0, 171, 250)
+}
+.welcome1{
+  left: 40%;
 }
 a{
   text-decoration: none;
 }
+
+.btn {
+ 
+  background-color: transparent;
+  border-radius: 0.6em;
+  font-size: 1rem;
+  padding: 1.2em 2.8em;
+  text-transform: uppercase;
+ 
+}
+
+
+  
+
+
+
+
+
+

@@ -20,7 +20,7 @@ body{
     top:5px;
     background-image: url('../images/arrow.png');
    color: brown;
-   font-size: 20px;
+   font-size: 15px;
    text-decoration: none;
    margin: 10px 0 0 30px;
    border: 5px solid brown;
@@ -31,10 +31,10 @@ body{
   .res{
     position: absolute;
     top:5px;
-    left:7vw;
+    left:5vw;
     background-image: url('../images/arrow.png');
     color: brown;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     margin: 10px 0 0 30px;
     border: 5px solid brown;
@@ -45,8 +45,8 @@ body{
 
 .welcome{
   margin-left: 15px;
-  font-size: 2vw;
-  margin:20vh;
+  font-size: 3vw;
+  margin:15vh;
 }
 .welcome p, {
   font-size: 3vw;
@@ -56,8 +56,8 @@ body{
 }
 
 .from{
-margin-top: 10vh;
-margin:20vh
+
+margin:10vh
 
 }
 
@@ -72,13 +72,16 @@ margin:20vh
 
 .Update, .save{
 
-  font-size: 20px;
-  
   border-radius: 5px;
   background-color: gray;
   color:white;
+  text-align: middle;
+ 
 }
-
+.updateDiv{
+  font-size: 20px;
+  
+}
 .updateDiv , .welcome p {
   display: flex;
   flex-direction: row;
@@ -88,6 +91,7 @@ margin:20vh
 a{
   text-decoration: none;
 }
+
 
 
 
@@ -132,77 +136,3 @@ form{
   left: 85%;
 }
 
-/* 
-
-
-
-
-.welcome h1{
-  font-size: 3vw;
-}
-.welcome p{
-  font-size: 2vw;
-  top:10%;
-}
-.resUpdate, .addItemFrom{
-  position: absolute;
-  left: 10%;
-  
-}
-.addItemFrom h1{
-  
-  font-family:  monospace;
-  font-size: 2vw;
-
-}
-.resUpdate{
-  font-family:  monospace;
-  font-size: 1.2vw;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: gray;
-  top:40%;
-}
-a{
-  text-decoration: none;
-  color: white;
-}
-.addItemFrom{
-  top:45%;
- 
-}
-input,select {
-  border: 1px solid rgb(135, 167, 187);
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  padding: 5px;
-}
-select{
-  font-size: 15px;
-}
-.row{
- float: left;
-  width: 30%;
-  border: 1px solid blue;     
-  position: absolute;
-  top:70%;
- 
-  
-
-} */
-
-
-
-/* 
-{{#each items}}
-
-<h5>{{name}}</h5>
-<p>{{description}}</p>
-<p>{{price}}</p>
-<img src="{{image}}" alt="">
-
-
- {{else}}
-    <p>There are no menu yet! </p>
-{{/each}} */

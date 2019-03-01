@@ -1,6 +1,11 @@
-<a href="/">homepage</a>
-<a href="/profile">profile</a>
+<link rel="stylesheet" href="../../../stylesheets/restaurant.css" />
 
+<link rel="stylesheet" href="../../../stylesheets/add-main-page.css" />
+
+<h1>
+<a class="home"href="/">Home</a>
+<a class="res"href="/profile">Profile</a>
+</h1>
 
 <form action="/mainSite" method="post" enctype="multipart/form-data">
 
@@ -16,11 +21,43 @@
 
 
 
-homepage Info
+
+
+
+
+<div class="viewSite">
+
+<div class="navbar">
+ 
+  <a href="{{user.username}}/home">About {{user.username}}</a>
+  <div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#r">appetizer</a>
+      <a href="#">main dish</a>
+      <a href="#">desserts</a>
+      <a href="#s">beverages</a>
+    </div>
+  </div>
+  <a href="#news">Order online</a>
+  <a href="#">Contact</a>
+</div>
+
+
+
+
+
 {{#if Restaurant }}
-{{Restaurant.username}}
 {{Restaurant.description}}
+
+<div class="restaurant">
 <img src="{{Restaurant.image}}" />
+</div>
 
 
 {{/if}}
+
+
+</div>

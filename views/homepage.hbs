@@ -2,12 +2,15 @@
 <link rel="stylesheet" href="../../../stylesheets/homepage.css" />
 
 {{#if user}}
-<button class="profile"><a href="/profile">profile</a></button>
+  <a href="/profile"><button class="btn profile">profile</button></a>
    <a class="welcome" href="restuarant/{{user.username}}">Welcome {{user.username}}</>
-  <button class="logout"><a href="/logout">Log out</a></button>
+ <a href="/logout"><button class="btn logout">Log out</button></a> 
 {{else}}
-
-<button class="signup"><a href="/signup"> Sign up </a></button>
-<button class="login"><a href="/login">Log In</a></button>
+<p class="welcome1" >Welcome...</p>
+<a href="/signup"><button class="btn signup"> Sign up </button></a> 
+<a href="/login"><button class="btn login">Log In</button></a> 
 
 {{/if}}
+
+
+

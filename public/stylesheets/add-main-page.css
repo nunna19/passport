@@ -1,0 +1,51 @@
+
+* {
+  box-sizing: border-box;
+  font-family:  monospace;
+}
+
+
+body{
+  background: url('../images/Screen\ Shot\ 2019-02-28\ at\ 3.38.44\ PM.png')no-repeat center center fixed;
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+  .home{
+    position: absolute;
+    top:5px;
+    background-image: url('../images/arrow.png');
+   color: brown;
+   font-size: 15px;
+   text-decoration: none;
+   margin: 10px 0 0 30px;
+   border: 5px solid brown;
+   border-radius: 10px;
+   padding: 5px;
+   
+  }
+  .res{
+    position: absolute;
+    top:5px;
+    left:5vw;
+    background-image: url('../images/arrow.png');
+    color: brown;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 10px 0 0 30px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    padding: 5px;
+  }
+.viewSite{
+  margin: 10vw;
+}
+img{
+
+  width:80%;
+}
