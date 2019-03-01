@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family:  monospace;
 }
 
 
@@ -10,39 +11,83 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:  monospace;
 }
 
 
-.home{
 
-  background-image: url('../images/arrow.png');
- color: brown;
- font-size: 20px;
- text-decoration: none;
- margin: 30px;
- border: 5px solid brown;
- border-radius: 10px;
- line-height: 50px;
-}
+  .home{
+    position: absolute;
+    top:5px;
+    background-image: url('../images/arrow.png');
+   color: brown;
+   font-size: 20px;
+   text-decoration: none;
+   margin: 10px 0 0 30px;
+   border: 5px solid brown;
+   border-radius: 10px;
+   padding: 5px;
+   
+  }
+  .res{
+    position: absolute;
+    top:5px;
+    left:7vw;
+    background-image: url('../images/arrow.png');
+    color: brown;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px 0 0 30px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+
 .welcome{
-  float:right;
+  margin-left: 15px;
+  font-size: 2vw;
+  margin:20vh;
+}
+.welcome p, {
+  font-size: 3vw;
+}
+.from-p{
   font-size: 2vw;
 }
 
-.Update{
-  font-size: 1.2vw;
-  padding: 10px;
+.from{
+margin-top: 10vh;
+margin:20vh
+
+}
+
+.fromPrice{
+  margin-left: 30vh;
+  margin-top: 5vh;
+}
+
+.price{
+ width:100px;
+}
+
+.Update, .save{
+
+  font-size: 20px;
+  
   border-radius: 5px;
   background-color: gray;
-  top:40%;
- 
-}
-a{
-  text-decoration: none;
   color:white;
 }
 
+.updateDiv , .welcome p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
 
 
 
@@ -51,7 +96,7 @@ a{
 
 .boxMenu{
  margin-top: 30%;
-  border: 1px solid red;
+ 
 }
 
 .red-box{
@@ -62,8 +107,8 @@ a{
 }
 
 .w3-card-4{
-  background: black;
-  height: 500px;
+  
+  height: 400px;
   background-size:contain;
   background-position:center;
   background-repeat: no-repeat;

@@ -5,22 +5,30 @@
 
 
 <a class="home" href="/">home</a>
+<a class="res" href="/restaurant/{{user.username}}">Go to restaurant</a>
 
 {{#if user}}
 <div class="welcome">
-  <h1>Welcome "{{user.username}}" </h1>
+  <p>Welcome "{{user.username}}" </p>
 
 </div>
+
 {{/if}}
+<div class="updateDiv">
+<p class="">Restaurant background:</p> 
 
-<button class="Update"><a href="/add-Main-page">Update background image</a></button>
-
-
+<button class="Update"><a href="/add-Main-page">Update image</a></button>
+</div>
 
 <div class="addFrom">
 
-  <h1>Add new item</h1>
-  <form class="From" action="/addItems" method="post" enctype="multipart/form-data">
+ 
+
+  <div class="divFrom">
+ 
+  
+  <form class="from" action="/addItems" method="post" enctype="multipart/form-data">
+    <p class="from-p">Add new item</p>
     <select name="itemType">
       <option class="option" value="Appetizer" name="Appetizer">appetizer</option>
       <option class="option" value="Main dish" name="Main dish">main dish</option>
@@ -30,17 +38,21 @@
     <label>Item name:</label>
     <input type="text" name="name">
     <label>description:</label>
-    <input type="text" name="description">
+    <input class="description" type="text" name="description" >
+    </br>
+    <div class="fromPrice">
     <label>price:</label>
-    <input type="text" name="price">
+    <input class="price" type="text" name="price">
     <label>image:</label>
     <input type="file" name="Photo">
-    <input type="submit" value="SAVE">
+ 
+    <input class="save" type="submit" value="SAVE">
+    </div>
   </form>
 
 </div>
 
-
+</div>
 
 
 
@@ -52,7 +64,7 @@
 <div class="red-box container">
   <div class="row">
  <div class="w3-container">
-  <h2>Photo Card</h2>
+
 
   <div class="w3-card-4" style="background-image:url('{{image}}')">
     {{!-- <img src="{{image}}" alt="Norway" style="width:100%"> --}}
