@@ -13,11 +13,7 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
-/* .hi{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
- } */
+
 .divType{
   border: 1px solid none;
   background-color: gray;
@@ -50,7 +46,7 @@ margin: 0px auto;
  
  .w3-card-4{
    
-   height: 330px;
+   height: 300px;
    background-size:contain;
    background-position:center;
    background-repeat: no-repeat;

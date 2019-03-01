@@ -48,6 +48,10 @@ router.get('/restaurant/:username',(req,res,next) =>{ //THIS IS THE ONE THAT NEE
       res.render('view-customer',{ //VIEW CUSTOMER.HBS
           item:inofFromDB, 
           mainPicture:user.image, 
+          imageOne:user.image1,
+          imagetTwo:user.image2,
+          imageThree:user.image3,
+          imageFour:user.image4,
           description: user.description,
           user:user,   
       })
@@ -157,26 +161,10 @@ router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
   });
 
 
-  // router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
 
-  //   console.log('we are in here',req.params, res.user)
-    
-  //   let itemType = req.params.itemType;
-  //   Item.find({itemType:itemType,restaurant:req.params.id}).then(items=>{
-  //     console.log(items)
-  //     res.render('items.hbs', {items, itemType})
-  
-  //   })
-
-  //   });
 
 
   
-
-
-
-
-
 
 
 

@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   //   // Do something
   // });
 
+//   $("button").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $(".second").offset().top},
+//         'slow');
+// });
 
 
 
