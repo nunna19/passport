@@ -72,7 +72,7 @@ router.post('/addItems', isLoggedIn, uploadCloud.single('Photo'),(req,res,next)=
     const newAddImg = new Item ({itemType,name, description,price,image, imgName, restaurant })
     newAddImg.save()
     .then(images => {
-      res.redirect(`/restaurant/${req.user.username}`)
+      res.redirect('../../profile')
 
     })
     .catch(error => {
