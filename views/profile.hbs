@@ -1,43 +1,42 @@
-
 <link rel="stylesheet" href="../../../stylesheets/profile.css" />
-{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> --}}
+{{!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> --}}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 <a class="home" href="/">home</a>
 
 {{#if user}}
-  <div class="welcome">
-    <h1>Welcome "{{user.username}}" </h1>
-    
-      <p>Add and Edit your website</p>
-      
-  </div>
+<div class="welcome">
+  <h1>Welcome "{{user.username}}" </h1>
+
+</div>
 {{/if}}
 
- <button class="resUpdate"><a href="/add-Main-page">Update background image</a></button>
+<button class="Update"><a href="/add-Main-page">Update background image</a></button>
 
 
 
-<div class="addItemFrom">
+<div class="addFrom">
 
-        <h1 >Add new item</h1>
-        <form action="/addItems" method="post" enctype="multipart/form-data">
-        <select name="itemType">
-              <option  class="option" value="Appetizer"  name ="Appetizer" >appetizer</option>
-              <option class="option"  value="Main dish"  name ="Main dish"  >main dish</option>
-              <option class="option" value="Desserts"   name ="Desserts"  >desserts</option>
-              <option class="option" value="Beverages"  name ="Beverages" >beverages</option>
-        </select>
-        <label>Item name:</label>
-        <input type="text" name="name">
-        <label>description:</label>
-        <input type="text" name="description">
-        <label>price:</label>
-        <input type="text" name="price">
-        <label>image:</label>
-        <input type ="file" name ="Photo">
-        <input type="submit" value="SAVE">
-        </form>
+  <h1>Add new item</h1>
+  <form class="From" action="/addItems" method="post" enctype="multipart/form-data">
+    <select name="itemType">
+      <option class="option" value="Appetizer" name="Appetizer">appetizer</option>
+      <option class="option" value="Main dish" name="Main dish">main dish</option>
+      <option class="option" value="Desserts" name="Desserts">desserts</option>
+      <option class="option" value="Beverages" name="Beverages">beverages</option>
+    </select>
+    <label>Item name:</label>
+    <input type="text" name="name">
+    <label>description:</label>
+    <input type="text" name="description">
+    <label>price:</label>
+    <input type="text" name="price">
+    <label>image:</label>
+    <input type="file" name="Photo">
+    <input type="submit" value="SAVE">
+  </form>
 
 </div>
 
@@ -48,32 +47,37 @@
 
 
 
-
-
+<div class="boxMenu">
 {{#each item}}
- <div class="red-box container" >
-      <div class="row">
-           
-            
-        <div class="col">
-                          <img src="{{image}}" alt="">
-                          {{itemType}}
-                        <h5>{{name}}</h5>
-                        <p>{{price}}</p>
-                          <p>{{description}}</p>
-                  <form action="/item/{{_id}}/edit" method="GET">
-                  <button type="submit">Edit</button>
-                  </form>
+<div class="red-box container">
+  <div class="row">
+ <div class="w3-container">
+  <h2>Photo Card</h2>
 
-                  <form action="/item/{{_id}}/delete" method="POST">
-                  <button type="submit">Delete</button>
-                  </form>
-  
-        </div>   
-      </div>
+  <div class="w3-card-4" style="background-image:url('{{image}}')">
+    {{!-- <img src="{{image}}" alt="Norway" style="width:100%"> --}}
+    <div class="w3-container w3-center">
+      <h4>{{itemType}}</h4>
+      <h5>{{name}}</h5>
+      <p>{{price}}</p>
+      <p>{{description}}</p>
+    </div>
+          <form action="/item/{{_id}}/edit" method="GET">
+        <button type="submit">Edit</button>
+      </form>
+
+      <form "delete" action="/item/{{_id}}/delete" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+
   </div>
-   {{else}}
-    <p>There are no menu yet! </p>
+</div>
 
-  {{/each}}
+  </div>
+</div>
+{{else}}
+<p>There are no menu yet! </p>
 
+{{/each}}
+
+</div>
