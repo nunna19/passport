@@ -1,8 +1,51 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
+height: 2000px;
+background-color:#9999;
+
+}
+
+.restaurant{
+  
+  background: no-repeat center center fixed; 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+background-repeat: no-repeat; 
+height: 100%;
+width: 98.8%;
+position: absolute;
+
 
 }
 
 
+.about{
+  margin-top: 105vh;
+
+}
+.letter{
+  width: 30vw;
+  float: left;
+  margin: 7vw 0 0 10vw;
+  
+}
+
+.aboutP{
+  margin: 0px auto;
+  font-family: monospace;
+  font-size: 2vw;
+  border-bottom: 2px solid brown;
+  width: 10vw;
+  text-align: center
+}
+.about img{
+  width: 40vw;
+  margin:5vw 0 0 5vw;
+  
+}
 
 

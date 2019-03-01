@@ -142,21 +142,32 @@ router.post('/item/:id/delete', isLoggedIn,(req, res, next) => {
 
 
  
-router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
+// router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
 
-  console.log('we are in here',req.params, res.user)
-  let itemType = req.params.itemType;
-  Item.find({itemType:itemType,restaurant:req.params.id}).then(items=>{
-    console.log(items)
-    res.render('items.hbs', {items, itemType})
+//   console.log('we are in here',req.params, res.user)
+//   User.findOne({username:req.params.username}).then(user=>{
+//   let itemType = req.params.itemType;
+//   Item.find({itemType:itemType,restaurant:req.params.id},{restaurant:user._id}).then(items=>{
+//     console.log(items)
+//     res.render('items.hbs', {items, itemType,user:user})
 
-  })
+//   })
+// })
+//   });
 
-  });
 
+  router.get('/restaurant/:username/:id/:itemType',(req,res,next) =>{
 
- 
+    console.log('we are in here',req.params, res.user)
+    
+    let itemType = req.params.itemType;
+    Item.find({itemType:itemType,restaurant:req.params.id}).then(items=>{
+      console.log(items)
+      res.render('items.hbs', {items, itemType})
+  
+    })
 
+    });
 
 
   

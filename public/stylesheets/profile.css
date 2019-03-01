@@ -191,3 +191,18 @@ select{
   
 
 } */
+
+
+
+/* 
+{{#each items}}
+
+<h5>{{name}}</h5>
+<p>{{description}}</p>
+<p>{{price}}</p>
+<img src="{{image}}" alt="">
+
+
+ {{else}}
+    <p>There are no menu yet! </p>
+{{/each}} */

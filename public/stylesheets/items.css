@@ -1,0 +1,71 @@
+
+* {
+  box-sizing: border-box;
+  font-family:  monospace;
+}
+
+
+body{
+  background: url('../images/Screen\ Shot\ 2019-02-28\ at\ 3.38.44\ PM.png')no-repeat center center fixed;
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* .hi{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ } */
+.divType{
+  border: 1px solid none;
+  background-color: gray;
+  width: 17vw;
+  border-radius: 10px;
+margin: 0px auto;
+} 
+
+.type{
+
+  text-align: center;
+  font-family: monospace;
+ font-size:3vw;
+ color: white;
+
+}
+.boxMenu{
+ 
+  margin: 25vh 10vh 0 10vh;
+
+ }
+ 
+ .red-box{
+ 
+   width:25%;
+   float:left;
+   height:700px;
+  
+ }
+ 
+ .w3-card-4{
+   
+   height: 330px;
+   background-size:contain;
+   background-position:center;
+   background-repeat: no-repeat;
+   background-position: top;
+   position: relative;
+ }
+ .w3-center{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   text-align: justify;
+   background: white;
+ }
+ form{
+   position: absolute;
+   bottom:0;
+   left:0;
+ }

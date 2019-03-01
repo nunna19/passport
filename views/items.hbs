@@ -1,15 +1,60 @@
-{{itemType}}
+
+<link rel="stylesheet" href="../../../stylesheets/items.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="navbar">
+ 
+  <a href="/restaurant/{{user.username}}">About {{user.username}}</a>
+  <div class="dropdown">
+    <button class="dropbtn">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/restaurant/{{user.username}}/{{user._id}}/Appetizer">appetizer</a>
+      <a href="/restaurant/{{user.username}}/{{user._id}}/MainDish">main dish</a>
+      <a href="/restaurant/{{user.username}}/{{user._id}}/Desserts">desserts</a>
+      <a href="/restaurant/{{user.username}}/{{user._id}}/Beverages">beverages</a>
+    </div>
+  </div>
+  <a href="#news">Order online</a>
+  <a href="#">Contact</a>
+</div>
 
 
+<div class="hi">
+<div class='divType'>
+<p class="type">{{itemType}}</p>
+</div>
+</div>
+
+<div class="boxMenu">
 {{#each items}}
-
-<h5>{{name}}</h5>
-<p>{{description}}</p>
-<p>{{price}}</p>
-<img src="{{image}}" alt="">
+<div class="red-box container">
+  <div class="row">
+ <div class="w3-container">
 
 
- {{else}}
-    <p>There are no menu yet! </p>
+  <div class="w3-card-4" style="background-image:url('{{image}}')">
+   
+    <div class="w3-container w3-center">
+
+      <h5>{{name}}</h5>
+  <p>{{price}}</p>
+     <p>{{description}}</p>
+    </div>
+        
+  </div>
+</div>
+
+  </div>
+</div>
+{{else}}
+<p>There are no menu yet! </p>
+
 {{/each}}
+
+</div>
+
+
+
 

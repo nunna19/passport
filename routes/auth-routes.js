@@ -123,7 +123,7 @@ authRoutes.post('/mainSite', isLoggedIn, uploadCloud.single('Photo'),(req,res,ne
     if(req.file){
       image = req.file.url;
     }
-    //const imgName = req.file.originalname;
+
 
     User.findById(req.user._id).then(ourUser =>{
         ourUser.image = image;

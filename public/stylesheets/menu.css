@@ -1,0 +1,46 @@
+
+
+body{
+  background: url('../images/Screen\ Shot\ 2019-02-28\ at\ 3.38.44\ PM.png')no-repeat center center fixed;
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.boxMenu{
+  margin-top: 30%;
+  
+ }
+ 
+ .red-box{
+ 
+   width:33%;
+   float:left;
+   height:700px;
+ }
+ 
+ .w3-card-4{
+   
+   height: 400px;
+   background-size:contain;
+   background-position:center;
+   background-repeat: no-repeat;
+   background-position: top;
+   position: relative;
+ }
+ .w3-center{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   text-align: justify;
+   background: white;
+ }
+ form{
+   position: absolute;
+   bottom:0;
+   left:0;
+ }
