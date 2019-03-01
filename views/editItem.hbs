@@ -1,6 +1,18 @@
 
 
-<form action="/item/{{menuEdit.id}}/edit" method="post" enctype="multipart/form-data">
+
+
+<link rel="stylesheet" href="../../../stylesheets/profile.css" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<a class="home" href="/">Home</a>
+<a class="res" href="/restaurant/{{user.username}}">Restaurant</a>
+
+
+<div class="editFrom">
+<form   action="/item/{{menuEdit.id}}/edit" method="post" enctype="multipart/form-data">
 <select name="itemType" value="{{menuEdit.itemType}}">
 			<option value="appetizer" >appetizer</option>
 			<option value="mainDish"  >main dish</option>
@@ -17,3 +29,4 @@
 <input type ="file" name ="Photo"  value="{{menuEdit.image}}"  >
 <input type="submit" value="SAVE">
 </form>
+</div>
