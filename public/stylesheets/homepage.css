@@ -1,66 +1,59 @@
 body{
- background: url("../images/Screen\ Shot\ 2019-02-27\ at\ 5.24.32\ PM.png")no-repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-
-}
-.signup , .profile{
-  left: 35%;
-  padding: 10px;
+  background: url("../images/Screen\ Shot\ 2019-02-27\ at\ 5.24.32\ PM.png")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
  
-}
-.signup , .login{
-  top:35%;
-}
-.profile, .logout{
-  top:35%;
-}
-.login, .logout{
-  right: 40%;
-  padding: 10px 17px 10px 17px;
- 
-}
-.login, .signup, .profile, .logout{
-  text-decoration: none;
-  position: absolute;
-  font-size: 2vw;
-  border: 1px solid none;
-  border-radius: 5px;
-  color: rgb(0, 171, 250)
-
-}
-
-.welcome,.welcome1{
-  position: absolute;
-  left: 38%;
-  top:20vh;
-  font-size: 3vw;
-  color: rgb(0, 171, 250)
-}
-.welcome1{
-  left: 40%;
-}
-a{
-  text-decoration: none;
-}
-
-.btn {
- 
-  background-color: transparent;
-  border-radius: 0.6em;
-  font-size: 1rem;
-  padding: 1.2em 2.8em;
-  text-transform: uppercase;
- 
-}
-
-
+ }
+ .signup , .profile{
+   left: 35%;
+   padding: 10px;
   
-
-
-
-
+ }
+ .signup , .login{
+   top:35%;
+ }
+ .profile, .logout{
+   top:35%;
+ }
+ .login, .logout{
+   right: 40%;
+   padding: 10px 17px 10px 17px;
+  
+ }
+ .login, .signup, .profile, .logout{
+   text-decoration: none;
+   position: absolute;
+   font-size: 2vw;
+   border: 1px solid none;
+   border-radius: 5px;
+   color: rgb(0, 171, 250)
+ 
+ }
+ 
+ .welcome,.welcome1{
+   position: absolute;
+   left: 38%;
+   top:20vh;
+   font-size: 3vw;
+   color: rgb(0, 171, 250)
+ }
+ .welcome1{
+   left: 40%;
+ }
+ a{
+   text-decoration: none;
+ }
+ 
+ .btn {
+  
+   background-color: transparent;
+   border-radius: 0.6em;
+   font-size: 1rem;
+   padding: 1em 2em;
+   text-transform: uppercase;
+  
+ }
 
 

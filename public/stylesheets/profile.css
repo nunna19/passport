@@ -137,7 +137,7 @@ form{
 }
 .edit{
   right:0;
-  left: 88%;
+  left: 84%;
 }
 
 
@@ -148,7 +148,7 @@ form{
 
 
 .editFrom{
-  position: absolute;
+position: absolute;
 top:20vh;
 margin: 20vw;
 
