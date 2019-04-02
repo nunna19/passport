@@ -34,10 +34,12 @@ body{
  
  .welcome,.welcome1{
    position: absolute;
-   left: 38%;
    top:20vh;
    font-size: 3vw;
    color: rgb(0, 171, 250)
+ }
+ .welcome{
+  left: 38%;
  }
  .welcome1{
    left: 40%;
@@ -57,3 +59,24 @@ body{
  }
 
 
+@media screen and (max-width:768px){
+
+ .btn{
+  background-color: transparent;
+  font-size: 15px;
+  margin-top: 5%;
+ } 
+
+ .login{
+   margin-right: 20%;
+ }
+ .signup{
+   margin-left: 20%;
+ }
+
+ .welcome1{
+   font: 2em sans-serif;
+   display: block;
+  left: 30%; 
+ }
+}

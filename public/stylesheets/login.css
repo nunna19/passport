@@ -57,3 +57,9 @@ a{
  
 }
 
+@media screen and (max-width:768px){
+
+  .loginFrom{
+    margin-top: 20vh;
+  }
+}

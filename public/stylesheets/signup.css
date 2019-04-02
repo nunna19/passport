@@ -53,3 +53,11 @@ button{
  padding: 5px;
  
 }
+
+
+@media screen and (max-width:768px){
+
+  .boxSignup{
+  margin: 20% 5% 5% 5%;
+  }
+}
