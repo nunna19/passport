@@ -3,30 +3,35 @@
 
 
 <link rel="stylesheet" href="../../../stylesheets/profile.css" />
-
+<link rel="stylesheet" href="../../../stylesheets/editFrom.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 <a class="home" href="/">Home</a>
-<a class="res" href="/restaurant/{{user.username}}">Restaurant</a>
+<a class="res" href="/restaurant/{{user.username}}/{{user._id}}">Restaurant</a>
 
 
 <div class="editFrom">
 <form   action="/item/{{menuEdit.id}}/edit" method="post" enctype="multipart/form-data">
 <select name="itemType" value="{{menuEdit.itemType}}">
-			<option value="Appetizer" >Appetizer</option>
-			<option value="MainDish"  >Main Dish</option>
-			<option value="Desserts"  >Desserts</option>
-      <option value="Beverages" >Beverages</option>
+			<option class="option"  value="Appetizer" >Appetizer</option>
+			<option class="option"  value="MainDish"  >Main Dish</option>
+			<option class="option"  value="Desserts"  >Desserts</option>
+      <option class="option"  value="Beverages" >Beverages</option>
 </select>
-<label>name</label>
-<input type="text" name="name" value="{{menuEdit.name}}">
-<label>description</label>
-<input type="text" name="description" value="{{menuEdit.description}}">
-<label>price</label>
-<input type="text" name="price" value="{{menuEdit.price}}">
-<label>image</label>
-<input type ="file" name ="Photo"  value="{{menuEdit.image}}"  >
-<input type="submit" value="SAVE">
+<br/>
+<label>Item name:</label>
+<input required type="text" type="text" name="name" value="{{menuEdit.name}}">
+<br/>
+<label>description:</label>
+<input required type="text" type="text" class="description" name="description" value="{{menuEdit.description}}">
+<br/>
+<label>price:</label>
+<input required type="number" type="number" class="price" name="price"  min="1" max="1000" value="{{menuEdit.price}}">
+<br/>
+<label>image:</label>
+<input  required type="file" type ="file" name ="Photo"  value="{{menuEdit.image}}"  >
+<input type="submit" value="SAVE" class="save">
 </form>
 </div>
+

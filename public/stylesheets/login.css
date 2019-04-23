@@ -26,12 +26,13 @@ input, label{
   border: 1px solid rgb(135, 167, 187);
   border-radius: 5px;
   background-color: rgb(126, 182, 148);
-  color: black;
   padding: 5px;
   color: white;
 
 }
-
+.login:hover{
+background-color: rgb(4, 230, 154);
+}
 .fillLogin{
   border: 1px solid rgb(135, 167, 187);
   background-color: white;
@@ -39,6 +40,7 @@ input, label{
   color: black;
   padding: 5px;
 }
+
 a{
   color: rgb(3, 46, 21);
 }
@@ -56,7 +58,11 @@ a{
  padding: 5px;
  
 }
-
+.home:hover{
+  background-color: brown;
+  color: white;
+  
+}
 
 @media screen and (max-width:768px){
 

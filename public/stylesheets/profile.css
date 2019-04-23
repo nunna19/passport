@@ -20,7 +20,7 @@ body{
     top:5px;
     background-image: url('../images/arrow.png');
    color: brown;
-   font-size: 15px;
+   font-size: 20px;
    text-decoration: none;
    margin: 10px 0 0 30px;
    border: 5px solid brown;
@@ -34,14 +34,22 @@ body{
     left:5vw;
     background-image: url('../images/arrow.png');
     color: brown;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
-    margin: 10px 0 0 30px;
+    margin: 10px 0 0 60px;
     border: 5px solid brown;
     border-radius: 10px;
     padding: 5px;
   }
-  
+  .home:hover{
+    background-color: brown;
+    color: white;
+    
+  }
+  .res:hover{
+    background-color: brown;
+    color: white;
+  }
 
 .welcome{
   margin-left: 15px;
@@ -73,10 +81,12 @@ margin:10vh
 .Update, .save{
 
   border-radius: 5px;
-  background-color: gray;
+  background-color: rgb(133, 16, 16);
   color:white;
   text-align: middle;
- 
+}
+.Update:hover, .save:hover{
+  background-color: rgb(199, 51, 51)
 }
 .updateDiv{
   font-size: 20px;
@@ -147,9 +157,14 @@ form{
 
 
 
-.editFrom{
+.editFrom form{
+  display: block;
 position: absolute;
 top:20vh;
-margin: 20vw;
-
+margin:  5vw 0 20vw 20vw;
+padding: 20px;
+font-size: 20px;
+}
+.editFrom input, .editFrom select{
+  margin-bottom: 10px;
 }

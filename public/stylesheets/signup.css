@@ -40,6 +40,9 @@ button{
   text-decoration: none;
  color: white;
 }
+button:hover{
+  background-color: rgb(4, 230, 154);
+  }
 .home{
   position: absolute;
   top:10px;
@@ -53,7 +56,11 @@ button{
  padding: 5px;
  
 }
-
+.home:hover{
+  background-color: brown;
+  color: white;
+  
+}
 
 @media screen and (max-width:768px){
 

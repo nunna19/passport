@@ -90,7 +90,7 @@ router.post('/addItems', isLoggedIn, uploadCloud.single('Photo'),(req,res,next)=
 ///..............................................Edit Item..........................................................
 
 router.get('/item/:id/edit',isLoggedIn, (req, res, next) => {
-  console.log('123431242142',req.params)
+  console.log('edit',req.params)
 Item.findById(req.params.id)
 .then(menuEdit=>{
   console.log('Edit.........................................',menuEdit)

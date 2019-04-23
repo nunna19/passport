@@ -31,7 +31,11 @@ body{
    color: rgb(0, 171, 250)
  
  }
- 
+ .login:hover, .signup:hover, .profile:hover, .logout:hover{
+   background-color: rgb(0, 171, 250);
+   color: white;
+
+ }
  .welcome,.welcome1{
    position: absolute;
    top:20vh;

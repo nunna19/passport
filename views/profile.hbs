@@ -34,15 +34,16 @@
       <option class="option" value="Beverages" name="Beverages">Beverages</option>
     </select>
     <label>Item name:</label>
-    <input type="text" name="name">
+    <input required type="text" type="text" name="name">
     <label>description:</label>
-    <input class="description" type="text" name="description" >
+    <input required type="text" class="description" type="text" name="description" >
     </br>
     <div class="fromPrice">
     <label>price:</label>
-    <input class="price" type="text" name="price">
+    <input required type="number" type="number" class="price" name="price"
+       min="1" max="1000">
     <label>image:</label>
-    <input type="file" name="Photo">
+    <input required type="file" type="file" name="Photo">
  
     <input class="save" type="submit" value="SAVE">
     </div>

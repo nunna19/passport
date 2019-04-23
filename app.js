@@ -12,20 +12,15 @@ const flash = require("connect-flash");
 const User = require('./models/user')
 const ensureLogin = require("connect-ensure-login");
 
-
-
-
-
-
-
-// app.js
 const session = require("express-session");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const dbPass = process.env.dbPass;
-// app.js
-// Mongoose configuration
+
+
+
+
 mongoose.Promise = Promise;
 mongoose
   .connect(`mongodb+srv://nunnapat:${dbPass}@cluster0-ljdlj.mongodb.net/test?retryWrites=true`)
